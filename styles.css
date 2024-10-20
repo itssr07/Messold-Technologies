@@ -1,0 +1,518 @@
+/* Top Bar */
+.top-bar {
+    background-color: #ff4081;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+.icons  {
+    display: flex;
+    grid-area: icons;
+    justify-self: end;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-slider {
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    margin-top: 20px;
+    font-size: 12px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 16.66%;
+    text-align: center;
+    padding: 10px;
+}
+
+.slide img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* Product Section */
+/* Product Section */
+
+/* View All Button */
+.view-all {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.view-all:hover {
+    background-color: #e91e63;
+    /* Same hover effect */
+}
+
+.view-all:active {
+    transform: scale(0.98);
+}
+
+.product-section {
+    padding: -50px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background-color: #e91e63;
+}
+
+.add-to-cart:active {
+    transform: scale(0.98);
+}
+
+
+/* Customer Review Section */
+.review-section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.reviews-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.reviews {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review {
+    flex: 0 0 10%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.next-review {
+    margin-top: 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+
+/* About Section */
+.about-pooja-box {
+    text-align: center;
+    padding: 50px;
+}
+
+.more-text {
+    display: none;
+    justify-content: center;
+}
+
+#read-more {
+    background-color: pink;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #f8c0d7;
+    padding: 20px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.footer-column {
+    margin: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+}
+
+.footer-image{
+    display: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.footer-column p,
+ul {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prev,
+    .next {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+/* Base Styles for All Screens */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (min-width: 1440px) {
+    .product-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .slider .slide {
+        flex: 0 0 16.66%;
+    }
+
+    .review {
+        flex: 0 0 10%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .product-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .slider .slide {
+        flex: 0 0 20%;
+    }
+
+    .review {
+        flex: 0 0 20%;
+    }
+}
+
+
+@media (min-width: 810px) and (max-width: 1080px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .slider .slide {
+        flex: 0 0 25%;
+    }
+
+    .review {
+        flex: 0 0 25%;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .about-pooja-box {
+        padding: 40px;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 430px) and (max-width: 932px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slider .slide {
+        flex: 0 0 50%;
+    }
+
+    .review {
+        flex: 0 0 50%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-column {
+        margin: 10px 0;
+    }
+
+    .view-all,
+    .add-to-cart {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .about-pooja-box {
+        padding: 20px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 810px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .slider .slide {
+        flex: 0 0 33.33%;
+    }
+
+    .review {
+        flex: 0 0 33.33%;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-column {
+        margin: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slider .slide {
+        flex: 0 0 50%;
+    }
+
+    .review {
+        flex: 0 0 50%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .about-pooja-box {
+        padding: 20px;
+    }
+
+    .view-all {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-column{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 2fr);
+        width: 100% ;
+    }
+
+    .slider .slide {
+        flex: 0 0 25%;
+    }
+
+    .review {
+        flex: 0 0 25%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column{
+        font-size: 15px;
+    }
+
+    .hero{
+        width: 100%;
+    }
+
+    .image-slider {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+
+    .view-all {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+}
